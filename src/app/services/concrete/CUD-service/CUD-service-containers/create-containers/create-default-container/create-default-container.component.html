@@ -1,0 +1,61 @@
+<p-dialog header="Добавление элемента в справочник " [visible]="true" [focusOnShow]="false" [responsive]="true" showEffect="fade" [modal]="true" [style]="{width: '800px'}" (visibleChange)="close()" [dismissableMask]="true" #dialog>
+    <h3>{{getEntityDescription()}}</h3>
+    <div [formGroup]="profileForm">
+        <div *ngFor="let field of template.fields">
+            <div *ngIf="field.editable !== false">
+                <ng-container [ngSwitch]="field.type">
+                    <ng-container *ngSwitchCase="'String'">
+                        <div *ngIf="!field.multilang; else elseForStringType" class="ui-fluid p-formgrid p-grid">
+                            <div class="p-field p-col">
+                                <label [for]="field.field[0].toLowerCase() + field.field.slice(1)">{{field.title}}</label>
+                                <input [id]="field.field[0].toLowerCase() + field.field.slice(1)" type="text" pInputText [formControlName]="field.field[0].toLowerCase() + field.field.slice(1)">
+                            </div>
+                        </div>
+                        <ng-template #elseForStringType>
+                            <ng-container *ngFor="let lang of profileForm.controls[field.field[0].toLowerCase() + field.field.slice(1)]['controls']; let i = index">
+                                <div class="p-field p-col">
+                                    <label [for]="field.field[0].toLowerCase() + field.field.slice(1) + '.' + lang.value">{{field.title}} ({{lang.value.language}})</label>
+                                    <input [id]="field.field[0].toLowerCase() + field.field.slice(1) + '.' + lang.value" type="text" pInputText [formControl]="lang.controls['name']">
+                                </div>
+
+                            </ng-container>
+                        </ng-template>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'Int32'">
+                        <div class="ui-fluid p-formgrid p-grid">
+                            <div class="p-field p-col">
+                                <label [for]="field.field[0].toLowerCase() + field.field.slice(1)">{{field.title}}</label>
+                                <input [id]="field.field[0].toLowerCase() + field.field.slice(1)" type="number" pInputText [formControlName]="field.field[0].toLowerCase() + field.field.slice(1)">
+                            </div>
+                        </div>
+                    </ng-container>
+                    <!-- <ng-container *ngSwitchCase="'DateTime'">DateTime</ng-container> -->
+                    <ng-container *ngSwitchCase="'Nullable`1'">
+                        <label>{{field.title}}</label>
+                        <p-calendar [(ngModel)]="profileForm.controls[field.field[0].toLowerCase() + field.field.slice(1)].value" [formControlName]="field.field[0].toLowerCase() + field.field.slice(1)" dateFormat="dd.mm.yy"></p-calendar>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'Boolean'">
+                        <label [for]="field.field[0].toLowerCase() + field.field.slice(1)" (click)="profileForm.controls[field.field[0].toLowerCase() + field.field.slice(1)].value = !profileForm.controls[field.field[0].toLowerCase() + field.field.slice(1)].value">{{field.title}}</label>
+                        <p-checkbox [id]="field.field[0].toLowerCase() + field.field.slice(1)" [(ngModel)]="profileForm.controls[field.field[0].toLowerCase() + field.field.slice(1)].value" [formControlName]="field.field[0].toLowerCase() + field.field.slice(1)" binary="true"></p-checkbox>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        <span>OtherType ({{field.type}})</span>
+                        <button type="button" pButton label="..." (click)="displayLinkedData(field.type)"></button>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-times" label="Назад" (click)="close()"></button>
+            <button type="button" pButton icon="pi pi-check" label="Сохранить" (click)="create()"></button>
+        </div>
+    </p-footer>
+
+</p-dialog>
+
+<p-sidebar [(visible)]="sidebarDisplay" position="bottom" [showCloseIcon]="false" styleClass="sidebarBottomForLiksData">
+    <!-- <app-banks [isChildren]="true"></app-banks> -->
+    <ng-template #bottomSidebarDialog></ng-template>
+</p-sidebar>

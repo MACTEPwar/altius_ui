@@ -1,0 +1,615 @@
+@import "../../../node_modules/roboto-fontface/css/roboto-condensed/roboto-condensed-fontface.css";
+//@import '../maintheme/_fonts.scss';
+@import '../maintheme/_variables.scss';
+@import '../designer/core.scss';
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $fontFamily;
+    color: $textColor;
+}
+
+#viewport {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-color: $lightnessGray;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow: auto;
+    .scrollHideLine {
+        height: 20px;
+        width: 100%;
+        display: block;
+        position: fixed;
+        margin-top: 0;
+        z-index: 10;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+// Top tabs and mainTopLine
+header {
+    width: 100%;
+    height: $heightLine;
+    background-color: $lightenGray;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    .topMainLine {
+        display: flex;
+        align-items: center;
+        height: $heightLine;
+        overflow: hidden;
+        ul.topLineTab {
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            align-items: center;
+            height: $heightLine;
+            padding: 0;
+            li {
+                cursor: pointer;
+                height: 100%;
+                background-color: $lightnessGray;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                font-size: $fontSize;
+                letter-spacing: normal;
+                font-weight: 500;
+                border-right: 1px solid $color4;
+                &:hover,
+                &.active {
+                    background-color: $white;
+                }
+                &:first-child {
+                    background-color: $color3;
+                    color: #fff;
+                    .tabName {
+                        padding: 0 20px 0 0;
+                    }
+                    &:hover,
+                    &:focus {
+                        background-color: $color1;
+                    }
+                }
+                .firstTab {
+                    font-size: $primeIconFontSize;
+                    margin: 0 10px 0 20px;
+                }
+                .tabName {
+                    padding: 0 0 0 20px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+                .topTabCloseIcon {
+                    border: none;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    outline: none;
+                    background-color: transparent;
+                    padding: 10px 15px 10px 10px;
+                }
+            }
+        }
+        button {
+            &.mainSideMenu {
+                height: $heightLine;
+                width: $heightLine;
+                border: none;
+                color: $white;
+                font-size: $primeIconFontSize;
+                background: $color2;
+                &:hover,
+                &:focus {
+                    outline: none;
+                    border: none;
+                    background-color: $color1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    color: $white;
+    flex-shrink: 0;
+    height: $heightLine;
+    background: $mainGradient;
+    .footerbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        height: 100%;
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            font-size: 14px;
+            li {
+                padding: 0 15px;
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.sidebarMenu {
+    width: 300px;
+    padding: 0;
+    border: none;
+    position: relative;
+    .ui-treenode-children.ng-star-inserted {
+        background-color: rgba(105, 136, 147, 0.1);
+    }
+    .ui-sidebar {
+        padding: 0;
+        border: 0;
+        .sidebarMenuTitle {
+            background: $mainGradient;
+            padding: 0 0 0 15px;
+            height: $heightLine;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .ui-sidebar-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: $heightLine;
+            width: $heightLine;
+            color: $white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                border: none;
+            }
+        }
+        .ui-tree {
+            .ui-tree-container {
+                .menuTreeCatTitle {
+                    border-bottom: 1px solid $lightenGray;
+                    .lastMenuLevel {
+                        div {
+                            span {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                    .ui-treenode-content {
+                        height: 50px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        position: relative;
+                        padding-left: 0 !important;
+                        &:focus,
+                        &:active {
+                            border: 0;
+                            box-shadow: none;
+                        }
+                        .ui-tree-toggler {
+                            position: absolute;
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            width: 100%;
+                        }
+                        .pi-caret-down {
+                            &:before {
+                                content: "\e933";
+                                right: 25px;
+                                position: absolute;
+                            }
+                        }
+                        .pi-caret-right {
+                            &:before {
+                                content: "\e930";
+                                right: 25px;
+                                position: absolute;
+                            }
+                        }
+                        .ui-treenode-label {
+                            display: flex;
+                            height: 50px;
+                            align-items: center;
+                            padding: 0 0 0 15px;
+                            border-radius: 0;
+                            overflow: hidden;
+                            width: 100%;
+                            >span {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                    }
+                    >div {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                    .sidebarIconTree {
+                        width: 20px;
+                        height: 20px;
+                        padding: 0;
+                        margin: 0 10px 0 0;
+                    }
+                    .ui-treenode-content.ui-treenode-selectable:hover {
+                        >span.ui-treenode-label.ui-corner-all {
+                            background-color: $color3;
+                            color: $white;
+                            >span img {
+                                filter: brightness(10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dashboards
+.dashbg {
+    height: 100%;
+    background: $white;
+    background: -moz-linear-gradient(top, $white 1%, #ecf0f6 41%);
+    background: -webkit-linear-gradient(top, $white 1%, #ecf0f6 41%);
+    background: linear-gradient(to bottom, $white 1%, #ecf0f6 41%);
+    padding-top: 25px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1240px;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.dashcard {
+    width: 370px;
+    padding: 0;
+    margin: 15px;
+    color: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px #d2d6db, -8px -8px 16px #ffffff;
+    list-style: none;
+    background-color: $lightnessGray !important;
+    font-family: $fontFamily;
+}
+
+.cdk-drag-preview {
+    padding: 0;
+    margin: 0;
+}
+
+.dashcardTitle {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+    font-size: $fontSize;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 1px 0 $white;
+    color: $fontColor;
+}
+
+.dashMenuList {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    border-top: 1px solid $white;
+    margin: 0;
+}
+
+.dashItemBox {
+    background-color: $white;
+    width: 105px;
+    height: 105px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    margin: 5px;
+    color: $fontColor;
+    transition: all linear 0.05s;
+    &:hover {
+        transform: scale(1.04);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    }
+    &.active {
+        color: $white;
+        transform: scale(1);
+        img {
+            filter: brightness(10);
+        }
+        .dashItemBoxTitle {
+            color: $white;
+            text-shadow: none;
+        }
+    }
+    .dashItemBoxTitle {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        word-wrap: break-word;
+        cursor: pointer;
+        text-align: center;
+        font-size: $fontSize;
+        font-weight: 400;
+        text-shadow: 0 1px 0 $white;
+        color: $fontColor;
+        padding: 4px;
+        line-height: 1rem;
+        letter-spacing: -0.5px;
+    }
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.dashMenuListChild {
+    position: absolute;
+    margin-top: 120px;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid $liteGray;
+    border-bottom: 1px solid $liteGray;
+    padding: 10px;
+}
+
+.childDashIcon {
+    transform: scaleY(-1);
+    margin: 0 10px;
+    color: #aaa;
+}
+
+.dashChildContainer {
+    border-top: 1px solid #C1C7D2;
+    border-bottom: 1px solid #C1C7D2;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: 370px;
+    background-color: $white;
+    .pi {
+        font-size: 0.7rem;
+    }
+    .ui-tree {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: block;
+            font-size: $fontSize;
+            .dashChildItem {
+                padding: 10px 10px 10px 20px;
+                width: 100%;
+                display: block;
+                color: $fontColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.card_1 {
+    border-color: $catalogColor;
+    .dashcardTitle {
+        border-bottom: 1px solid $catalogColor;
+    }
+    .dashItemBox {
+        border-color: $catalogColor;
+        &.active {
+            background-color: $catalogColor;
+            .dashcardTitle {
+                color: $white;
+                text-shadow: none;
+            }
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $catalogColor;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_2 {
+    border-color: $goodsColor;
+    .dashcardTitle {
+        border-bottom: 1px solid $goodsColor;
+    }
+    .dashItemBox {
+        border-color: $goodsColor;
+        &.active {
+            background-color: $goodsColor;
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $goodsColor;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_3 {
+    border-color: $leftoversColor;
+    .dashcardTitle {
+        border-bottom: 1px solid $leftoversColor;
+    }
+    .dashItemBox {
+        border-color: $leftoversColor;
+        &.active {
+            background-color: $leftoversColor;
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $leftoversColor;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_4 {
+    border-color: $documentsColor;
+    .dashcardTitle {
+        border-bottom: 1px solid $documentsColor;
+    }
+    .dashItemBox {
+        border-color: $documentsColor;
+        &.active {
+            background-color: $documentsColor;
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $documentsColor;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_5 {
+    border-color: $analyticsColor;
+    .dashcardTitle {
+        border-bottom: 1px solid $analyticsColor;
+    }
+    .dashItemBox {
+        border-color: $analyticsColor;
+        &.active {
+            background-color: $analyticsColor;
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $analyticsColor;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card_6 {
+    border-color: $color1;
+    .dashcardTitle {
+        border-bottom: 1px solid $color1;
+    }
+    .dashItemBox {
+        border-color: $color1;
+        &.active {
+            background-color: $color1;
+        }
+    }
+    .dashChildContainer {
+        .ui-tree {
+            .dashChildItem {
+                &:hover,
+                &:focus {
+                    background-color: $color1;
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.dashcard:last-child {
+    border: none;
+}
+
+// Toolbar
+.table_toolbar {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: $white;
+}
+
+//Tables
+.hideFilter {
+    display: none;
+}
+
+.sidebarBottomForLiksData.ui-sidebar-bottom {
+    height: auto;
+    min-height: 40em;
+}

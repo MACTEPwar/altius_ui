@@ -1,0 +1,114 @@
+<div>
+  <mat-card>
+    Накладная №<span *ngIf="doc != null">{{doc.num}}</span>
+    <mat-checkbox>Активировать</mat-checkbox>
+    <button mat-button [matMenuTriggerFor]="menu">Операции с накладной</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Загрузить электронную накладную</button>
+      <button mat-menu-item>Расценить накладную</button>
+      <button mat-menu-item>Переопределить товар</button>
+      <button mat-menu-item>Связать с заказом</button>
+      <button mat-menu-item>Удалить все строки</button>
+      <button mat-menu-item>Перенос строк в расход</button>
+      <button mat-menu-item>Создать расход на ТТН</button>
+      <button mat-menu-item>Движение по партии</button>
+      <button mat-menu-item>Информация о контролях</button>
+      <button mat-menu-item>Перенос строк в другой документ</button>
+      <button mat-menu-item>Удалить документ</button>
+    </mat-menu>
+  </mat-card>
+</div>
+
+
+
+<div>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Типа глаз
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <mat-label>ID</mat-label>
+        <input matInput [readonly]="doc?.id">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Код</mat-label>
+        <input matInput [readonly]="doc?.id">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Номер</mat-label>
+        <input matInput type="text" [readonly]="doc?.num">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Номер внутренний</mat-label>
+        <input matInput type="text" [readonly]="doc?.numInner">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Тип документа</mat-label>
+        <input matInput type="number" [readonly]="doc?.docType">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Доп тип</mat-label>
+        <input matInput type="number" [readonly]="doc?.docSubtype">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Тип оплаты</mat-label>
+        <input matInput type="number" [readonly]="doc?.paymentType">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Вид документа</mat-label>
+        <input matInput type="number">
+      </mat-form-field>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+
+
+<div>
+  <mat-card>
+    <div>
+      <button mat-button>Обновить</button>
+      <button mat-button>Добавить товар</button>
+      <button mat-button>Удалить товар</button>
+      <button mat-button>Сохранить</button>
+      <button mat-button>Фильтр</button>
+      <button mat-button>Экспорт</button>
+      <button mat-button>Вид</button>
+      <button mat-button [matMenuTriggerFor]="menu1">Операции</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item (click)="showModal()">Печать стикеров и ценников</button>
+        <button mat-menu-item>Печать стикера ПН</button>
+        <button mat-menu-item>Печать стикера НН</button>
+        <button mat-menu-item>Печать Акт приема передачи</button>
+        <button mat-menu-item>Печать Акт недовоза</button>
+        <button mat-menu-item>Печать Лист приемки товара</button>
+        <button mat-menu-item>Печать Акт ответственного товара</button>
+        <button mat-menu-item>Печать Формы раскладки по аптекам</button>
+        <button mat-menu-item>Подобрать серию по сроку годности</button>
+        <button mat-menu-item>Перенос строк в другой документ</button>
+        <button mat-menu-item>Печать пакет докум. комиссии</button>
+      </mat-menu>
+    </div>
+    <div>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+
+      <mat-table [dataSource]="data" *ngIf="!loading">
+
+        <ng-container *ngFor="let column of fields" matColumnDef="{{column}}">
+          <mat-header-cell *matHeaderCellDef>{{column}}</mat-header-cell>
+          <mat-cell *matCellDef="let element "> {{element[column]}} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="fields"></mat-header-row>
+        <mat-row *matRowDef="let element; columns: fields;"></mat-row>
+      </mat-table>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,443 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200712.182432.6148.0.001.json",
+    "dumpEventTime": "2020-07-12T18:24:32Z",
+    "dumpEventTimeStamp": "1594567472394",
+    "processId": 6148,
+    "cwd": "D:\\WORK\\ALTIUS\\altius_ui",
+    "commandLine": [
+      "node",
+      "C:\\Users\\Konstantine\\AppData\\Roaming\\npm\\\\node_modules\\@angular\\cli\\bin\\ng",
+      "serve"
+    ],
+    "nodejsVersion": "v13.3.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "13.3.0",
+      "v8": "7.9.317.25-node.23",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.3.0/node-v13.3.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.3.0/node-v13.3.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v13.3.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 1693062,
+        "nice": 0,
+        "sys": 3590531,
+        "idle": 94021796,
+        "irq": 2058937
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 2687296,
+        "nice": 0,
+        "sys": 1940843,
+        "idle": 94677015,
+        "irq": 24656
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 2548953,
+        "nice": 0,
+        "sys": 1390828,
+        "idle": 95365375,
+        "irq": 16062
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 2235093,
+        "nice": 0,
+        "sys": 1135468,
+        "idle": 95934593,
+        "irq": 14796
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 2050953,
+        "nice": 0,
+        "sys": 898828,
+        "idle": 96355375,
+        "irq": 11796
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8600 CPU @ 3.10GHz",
+        "speed": 3096,
+        "user": 2121734,
+        "nice": 0,
+        "sys": 1694625,
+        "idle": 95488796,
+        "irq": 11515
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:4b:8a:5c",
+        "address": "fe80::292e:7563:952e:2571",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 6
+      },
+      {
+        "name": "vEthernet (Default Switch)",
+        "internal": false,
+        "mac": "00:15:5d:4b:8a:5c",
+        "address": "192.168.127.161",
+        "netmask": "255.255.255.240",
+        "family": "IPv4"
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "2c:fd:a1:e4:13:92",
+        "address": "fe80::580f:642b:e878:2e15",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 16
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "2c:fd:a1:e4:13:92",
+        "address": "192.168.0.112",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:07",
+        "address": "fe80::10e5:2589:e96:649a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 7
+      },
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:07",
+        "address": "192.168.56.1",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "UNIBRONG"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff6245b1509",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10857"
+    },
+    {
+      "pc": "0x00007ff6245b587c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28124"
+    },
+    {
+      "pc": "0x00007ff6245b4838",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23960"
+    },
+    {
+      "pc": "0x00007ff6246acc8b",
+      "symbol": "v8::base::CPU::has_sse+39435"
+    },
+    {
+      "pc": "0x00007ff624ed44ae",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff624ebbc01",
+      "symbol": "v8::SharedArrayBuffer::Externalize+785"
+    },
+    {
+      "pc": "0x00007ff624d82f5c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff624d8e250",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff624d8ad7f",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3151"
+    },
+    {
+      "pc": "0x00007ff624d804d3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff624d7ec64",
+      "symbol": "v8::internal::Heap::AllocateExternalBackingStore+1300"
+    },
+    {
+      "pc": "0x00007ff624da0c54",
+      "symbol": "v8::internal::Factory::NewFillerObject+196"
+    },
+    {
+      "pc": "0x00007ff624afb251",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1681"
+    },
+    {
+      "pc": "0x00007ff62531ae3d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+517453"
+    },
+    {
+      "pc": "0x00007ff6252a7dfa",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+46346"
+    },
+    {
+      "pc": "0x0000020045af1c2f",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2179256320,
+    "totalCommittedMemory": 2179256320,
+    "usedMemory": 2125047096,
+    "availableMemory": 47041456,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 33040,
+        "used": 33040,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 33554432,
+        "capacity": 16758784,
+        "used": 5370536,
+        "available": 11388248
+      },
+      "old_space": {
+        "memorySize": 1857687552,
+        "committedMemory": 1857687552,
+        "capacity": 1844158488,
+        "used": 1843823040,
+        "available": 335448
+      },
+      "code_space": {
+        "memorySize": 21401600,
+        "committedMemory": 21401600,
+        "capacity": 19056064,
+        "used": 19056064,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 12062720,
+        "committedMemory": 12062720,
+        "capacity": 3513680,
+        "used": 3513680,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 253665280,
+        "committedMemory": 253665280,
+        "capacity": 252706448,
+        "used": 252706448,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 544288,
+        "used": 544288,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16758784,
+        "used": 0,
+        "available": 16758784
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 488.906,
+    "kernelCpuSeconds": 22.859,
+    "cpuConsumptionPercent": 0.732568,
+    "maxRss": 2448572416,
+    "pageFaults": {
+      "IORequired": 3681538,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 12509,
+      "writes": 50
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\",
+    "=D:": "D:\\WORK\\ALTIUS\\altius_ui",
+    "=ExitCode": "00000000",
+    "BROWSERSLIST_IGNORE_OLD_DATA": "1",
+    "dp0": "C:\\Users\\Konstantine\\AppData\\Roaming\\npm\\",
+    "LOCALAPPDATA": "C:\\Users\\Konstantine\\AppData\\Local",
+    "ProgramFiles": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "VRAY_SEND_FEEDBACK": "0",
+    "USERNAME": "Konstantine",
+    "COMPUTERNAME": "UNIBRONG",
+    "VRAY4_FOR_3DSMAX2019_MAIN": "C:\\Program Files\\Chaos Group\\V-Ray\\3ds Max 2019/bin",
+    "IDEA_INITIAL_DIRECTORY": "C:\\WINDOWS\\system32",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "ADSK_3DSMAX_SDK_2019": "D:\\!!! 3DMAX\\Autodesk\\3ds Max 2019 SDK\\maxsdk",
+    "OS": "Windows_NT",
+    "NUMBER_OF_PROCESSORS": "6",
+    "ADSK_CLM_WPAD_PROXY_CHECK": "FALSE",
+    "SystemDrive": "C:",
+    "TEMP": "C:\\Temp",
+    "USERPROFILE": "C:\\Users\\Konstantine",
+    "PUBLIC": "C:\\Users\\Public",
+    "ProgramData": "C:\\ProgramData",
+    "VRAY4_FOR_3DSMAX2019_PLUGINS": "C:\\Program Files\\Chaos Group\\V-Ray\\3ds Max 2019/bin/plugins",
+    "ADSK_3DSMAX_x64_2019": "C:\\Program Files\\Autodesk\\3ds Max 2019\\;D:\\!!! 3DMAX\\Autodesk\\3ds Max 2019\\",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "INTEL_DEV_REDIST": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "PROCESSOR_LEVEL": "6",
+    "SystemRoot": "C:\\WINDOWS",
+    "=::": "::\\",
+    "VRAY_OSL_PATH_3DSMAX2019": "C:\\Program Files\\Chaos Group\\V-Ray\\3ds Max 2019\\opensl",
+    "ProgramW6432": "C:\\Program Files",
+    "APPDATA": "C:\\Users\\Konstantine\\AppData\\Roaming",
+    "LOGONSERVER": "\\\\UNIBRONG",
+    "CUDA_CACHE_MAXSIZE": "268435456",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "TERMINAL_EMULATOR": "JetBrains-JediTerm",
+    "VRAY_MDL_PATH_3DSMAX2019": "C:\\Program Files\\Chaos Group\\V-Ray\\3ds Max 2019\\mdl",
+    "asl.log": "Destination=file",
+    "WEBPACK_DEV_SERVER": "true",
+    "_prog": "node",
+    "__INTELLIJ_COMMAND_HISTFILE__": "C:\\Users\\Konstantine\\AppData\\Roaming\\JetBrains\\WebStorm2020.1\\terminal\\history\\history-",
+    "USERDOMAIN": "UNIBRONG",
+    "SESSIONNAME": "Console",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "HOMEPATH": "\\Users\\Konstantine",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "windir": "C:\\WINDOWS",
+    "TMP": "C:\\Temp",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "Path": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64_win\\compiler;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Calibre2\\;C:\\Users\\Konstantine\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Konstantine\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Konstantine\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Konstantine\\AppData\\Roaming\\npm;C:\\Users\\Konstantine\\.dotnet\\tools;C:\\Users\\Konstantine\\.deno\\bin",
+    "PROCESSOR_REVISION": "9e0a",
+    "VBOX_MSI_INSTALL_PATH": "D:\\VIIRTUALBOX\\VirtualBox6\\",
+    "HOMEDRIVE": "C:",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "OneDrive": "C:\\Users\\Konstantine\\OneDrive",
+    "USERDOMAIN_ROAMINGPROFILE": "UNIBRONG",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\Program Files\\AVAST Software\\Avast\\aswhook.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll"
+  ]
+}

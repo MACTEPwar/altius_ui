@@ -1,0 +1,25 @@
+<p-sidebar [(visible)]="displaySidebar" class="sidebarMenu" >
+        <div class="sidebarMenuTitle"><img src="{{imagePath}}logo.png" alt="logo" /></div>
+        <p-tree metaKeySelection="false" [value]="myMenu" selectionMode="single" (onNodeSelect)="nodeSelect($event)" >
+            <ng-template let-node  pTemplate="picture" >
+              <img [attr.src]="node.icon" class="sidebarIconTree" alt="{{node.label}}" *ngIf="node.icon"/>
+              <span >{{node.label}}</span>
+            </ng-template>
+            <ng-template let-node  pTemplate="default">
+              <span >{{node.label}}</span>
+            </ng-template>
+        </p-tree>
+</p-sidebar>
+
+<div class="topMainLine">
+  <button (click)="displaySidebar = true"  class="mainSideMenu"><fa-icon [icon]="faThList"></fa-icon></button>
+  <ul class="topLineTab">
+    <li [ngClass]="{active:tab.active}" *ngFor="let tab of topTabs; let index = index" >
+      <div *ngIf="index === 0" class="firstTab"><fa-icon [icon]="faTh"></fa-icon></div>
+      <div class="tabName" (click)="clickTab(tab)">{{tab.name}}</div>
+      <button class="topTabCloseIcon" *ngIf="!!tab.canClose" (click)="closeTab($event, index)">
+        <fa-icon [icon]="faTimes"></fa-icon>
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+<div class="dashbg" >
+<ul class="dashboard" pDroppable="plitka" (onDrop)="onDrop($event)">
+  <ng-container *ngFor="let item of items;">
+    <app-plitka [incomingSelect]="selectedItem" (onClick)="onPlitkaCkick($event)" class="dashcard {{'card_' + item.id}}" [item]="item" [attr.data-id]="item.id" pDraggable="plitka" (onDragStart)="onDragStart($event,item)"></app-plitka>
+  </ng-container>
+</ul>
+</div>

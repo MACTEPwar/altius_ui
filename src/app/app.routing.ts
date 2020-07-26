@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './services/helpers/auth.guard';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { BanksComponent } from './modules/dataTable/components/banks/banks.component';

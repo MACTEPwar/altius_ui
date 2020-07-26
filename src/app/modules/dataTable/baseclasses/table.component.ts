@@ -4,7 +4,7 @@ import { AuthenticationService } from '../../authentication/services/concrete/au
 import { TopTabService } from '../../topTab/toptab.service';
 import { ITableService } from '../services/Interfaces/itable.service';
 import { TopTabPageComponent } from '../../topTab/toptabpage.component';
-import { CUDService } from '../../../services/concrete/CUD-service/cud-service.service';
+import { CUDService } from '../../cud-data-table/services/concrete/cud-service.service';
 
 export class TableModel {
   loading: boolean;

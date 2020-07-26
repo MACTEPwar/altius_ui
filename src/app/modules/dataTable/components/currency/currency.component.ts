@@ -3,7 +3,7 @@ import { AuthenticationService } from '../../../authentication/services/concrete
 import { TopTabService } from '../../../topTab/toptab.service';
 import { TableDirective } from '../../baseclasses/table.component';
 import {CurrencyService} from '../../services/concrete/currency.service';
-import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { CUDService } from '../../../cud-data-table/services/concrete/cud-service.service';
 
 @Component({
   templateUrl: '../../baseclasses/table.component.html',

@@ -2,7 +2,7 @@ import { Component, ComponentFactoryResolver } from '@angular/core';
 import { TopTabService } from '../../../topTab/toptab.service';
 import { TableDirective } from '../../baseclasses/table.component';
 import { StoreService } from '../../services/concrete/store.service';
-import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { CUDService } from '../../../cud-data-table/services/concrete/cud-service.service';
 import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
 
 @Component({

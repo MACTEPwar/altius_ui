@@ -1,7 +1,7 @@
 import {Component, ComponentFactoryResolver} from '@angular/core';
 import { TableDirective } from '../../baseclasses/table.component';
-import {NaclListService} from '../../services/Concrete/naclList.service';
-import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import {NaclListService} from '../../services/concrete/naclList.service';
+import { CUDService } from '../../../cud-data-table/services/concrete/cud-service.service';
 import { TopTabService } from '../../../topTab/toptab.service';
 import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
 

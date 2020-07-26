@@ -1,5 +1,5 @@
 import {Component, ComponentFactoryResolver} from '@angular/core';
-import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { CUDService } from '../../../cud-data-table/services/concrete/cud-service.service';
 import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
 import { TopTabService } from '../../../topTab/toptab.service';
 import { TableDirective } from '../../baseclasses/table.component';

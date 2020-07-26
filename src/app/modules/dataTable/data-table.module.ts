@@ -27,6 +27,8 @@ import { StoreComponent } from './components/store/store.component';
 import { DataFormatPipe } from './pipes/data-format/data-format.pipe';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
+import { CudDataTableModule } from '../cud-data-table/cud-data-table.module';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     DropdownModule,
     DialogModule,
     InputTextModule,
-    DragDropModule
+    DragDropModule,
+
+    CudDataTableModule
   ],
   exports: [
     BanksComponent,

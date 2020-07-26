@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { ITableService } from '../interfaces/itable.service';
 import { FilterValue } from '../../models/filtervalue';
-import { BaseService } from './base.service';
+import { BaseService } from '../../../topTab/base.service';
 import { Observable } from 'rxjs';
 
 export class TableService extends BaseService implements ITableService {

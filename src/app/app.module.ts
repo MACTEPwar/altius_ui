@@ -27,18 +27,10 @@ import { FooterComponent } from './components/footer.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
-import { BanksComponent } from './components/banks/banks.component';
 import { DragDropModule } from 'primeng/dragdrop';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { CurrencyComponent } from './components/currency/currency.component';
-import { LocationComponent } from './components/location/location.component';
-import { ContractorComponent } from './components/contractor/contractor.component';
-import { EmployeeComponent } from './components/employee/employee.component';
-import { PostComponent } from './components/post/post.component';
-import { StoreComponent } from './components/store/store.component';
-import { NaclListComponent } from './components/nacllist/nacllist.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NaclComponent } from './components/nacl/nacl.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -54,7 +46,6 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
-import { DataFormatPipe } from './pipes/data-format/data-format.pipe';
 import { CheckboxModule } from 'primeng/checkbox';
 import { CalendarModule } from 'primeng/calendar';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -67,8 +58,10 @@ import { GetColumnRulesByModelAndFieldNamePipe } from './pipes/get-column-rules-
 import { CreateDefaultContainerComponent } from './services/concrete/CUD-service/CUD-service-containers/create-containers/create-default-container/create-default-container.component';
 import { UpdateDefaultContainerComponent } from './services/concrete/CUD-service/CUD-service-containers/update-containers/update-default-container/update-default-container.component';
 import { DeleteDefaultContainerComponent } from './services/concrete/CUD-service/CUD-service-containers/delete-containers/delete-default-container/delete-default-container.component';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+
 import { AuthenticationModule } from './modules/authentication/authentication.module';
+
+import { DataTableModule } from './modules/dataTable/data-table.module';
 
 @NgModule({
   declarations: [
@@ -79,27 +72,18 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
     AlertComponent,
     HeaderComponent,
     FooterComponent,
-    BanksComponent,
-    CurrencyComponent,
-    LocationComponent,
-    ContractorComponent,
-    EmployeeComponent,
-    PostComponent,
-    StoreComponent,
-    NaclListComponent,
     NaclComponent,
     ProductSheetComponent,
-    DataFormatPipe,
     ParseDatePipe,
     GetColumnRulesByModelAndFieldNamePipe,
     PlitkaComponent,
     CreateDefaultContainerComponent,
     UpdateDefaultContainerComponent,
-    DeleteDefaultContainerComponent,
-    ToolbarComponent,
+    DeleteDefaultContainerComponent
   ],
   imports: [
     AuthenticationModule,
+    DataTableModule,
 
     BrowserModule,
     TabViewModule,
@@ -151,8 +135,8 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
     CreateDefaultContainerComponent,
     UpdateDefaultContainerComponent,
 
-    BanksComponent,
-    EmployeeComponent
+    // BanksComponent,
+    // EmployeeComponent
   ],
 })
 export class AppModule {}

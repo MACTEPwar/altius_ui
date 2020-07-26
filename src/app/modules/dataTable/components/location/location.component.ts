@@ -1,13 +1,14 @@
 import {Component, ComponentFactoryResolver} from '@angular/core';
-import {AuthenticationService} from '../../services/concrete/authentication.service';
-import {TopTabService} from '../../services/concrete/toptab.service';
-import {TableDirective} from '../baseclasses/table.component';
-import {Currency} from '../../models/currency';
+import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
+import { TopTabService } from '../../../topTab/toptab.service';
+import { TableDirective } from '../../baseclasses/table.component';
 import {LocationService} from '../../services/concrete/location.service';
-import { CUDService } from 'src/app/services/concrete/CUD-service/cud-service.service';
+
 
 @Component({
-  templateUrl: '../baseclasses/table.component.html',
+  templateUrl: '../../baseclasses/table.component.html',
+  styleUrls: ['../../baseclasses/table.component.scss'],
   providers: [LocationService]
 })
 export class LocationComponent extends TableDirective {

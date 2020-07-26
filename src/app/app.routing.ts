@@ -4,14 +4,14 @@ import { AuthGuard } from './services/helpers/auth.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { BanksComponent } from './components/banks/banks.component';
-import { CurrencyComponent } from './components/currency/currency.component';
-import { LocationComponent } from './components/location/location.component';
-import { ContractorComponent } from './components/contractor/contractor.component';
-import { EmployeeComponent } from './components/employee/employee.component';
-import { PostComponent } from './components/post/post.component';
-import { StoreComponent } from './components/store/store.component';
-import { NaclListComponent } from './components/nacllist/nacllist.component';
+import { BanksComponent } from './modules/dataTable/components/banks/banks.component';
+import { CurrencyComponent } from './modules/dataTable/components/currency/currency.component';
+import { LocationComponent } from './modules/dataTable/components/location/location.component';
+import { ContractorComponent } from './modules/dataTable/components/contractor/contractor.component';
+import { EmployeeComponent } from './modules/dataTable/components/employee/employee.component';
+import { PostComponent } from './modules/dataTable/components/post/post.component';
+import { StoreComponent } from './modules/dataTable/components/store/store.component';
+import { NaclListComponent } from './modules/dataTable/components/naclList/naclList.component';
 import { NaclComponent } from './components/nacl/nacl.component';
 
 const routes: Routes = [

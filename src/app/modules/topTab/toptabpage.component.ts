@@ -1,11 +1,10 @@
 import {Component, Directive, OnInit} from '@angular/core';
-import {TopTabService} from '../../services/concrete/toptab.service';
+import {AuthenticationService} from '../authentication/services/concrete/authentication.service';
+import {TopTabService} from '../topTab/toptab.service';
 import {BaseComponent} from './base.component';
 import {stirng2faIcon} from '../../services/helpers/helper-functions';
-import { AuthenticationService } from 'src/app/modules/authentication/services/concrete/authentication.service';
 
 @Directive()
-// tslint:disable-next-line:directive-class-suffix
 export abstract class TopTabPageComponent extends BaseComponent implements OnInit {
   fields = [];
 

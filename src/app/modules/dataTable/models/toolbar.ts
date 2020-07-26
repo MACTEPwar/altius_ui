@@ -1,5 +1,5 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { stirng2faIcon } from '../services/helpers/helper-functions';
+import { stirng2faIcon } from '../../../services/helpers/helper-functions';
 
 export class ToolbarItem {
   type: string;

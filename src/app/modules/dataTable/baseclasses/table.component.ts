@@ -1,10 +1,10 @@
 import { AfterViewInit, Directive, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver, Input } from '@angular/core';
-import { EDataType, TemplateEntity, TemplateEntityColumn } from '../../models/concrete/templateentity';
-import { AuthenticationService } from '../../services/concrete/authentication.service';
-import { TopTabService } from '../../services/concrete/toptab.service';
-import { ITableService } from '../../services/interfaces/itable.service';
-import { TopTabPageComponent } from './toptabpage.component';
-import { CUDService } from '../../services/concrete/CUD-service/cud-service.service';
+import { EDataType, TemplateEntity, TemplateEntityColumn } from '../models/templateentity';
+import { AuthenticationService } from '../../authentication/services/concrete/authentication.service';
+import { TopTabService } from '../../topTab/toptab.service';
+import { ITableService } from '../services/Interfaces/itable.service';
+import { TopTabPageComponent } from '../../topTab/toptabpage.component';
+import { CUDService } from '../../../services/concrete/CUD-service/cud-service.service';
 
 export class TableModel {
   loading: boolean;
@@ -146,7 +146,7 @@ export abstract class TableDirective extends TopTabPageComponent implements OnIn
       page: (event?.first / event?.rows || 0) + 1,
       pageItems: event?.rows || 10
     };
-    this.loading = true;
+    this.table.loading = true;
 
     this.service.getTemplate(true)
       .pipe()

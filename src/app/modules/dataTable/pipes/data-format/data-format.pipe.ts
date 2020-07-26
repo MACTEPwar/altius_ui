@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {LanguageModel } from '../../models/concrete/languagemodel';
+import {LanguageModel } from '../../models/languagemodel';
 
 @Pipe({
   name: 'dataFormat'

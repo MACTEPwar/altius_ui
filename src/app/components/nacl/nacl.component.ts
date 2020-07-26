@@ -1,12 +1,12 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {TopTabService} from '../../services/concrete/toptab.service';
+import {TopTabService} from '../../modules/topTab/toptab.service';
 import {NaclService} from '../../services/concrete/nacl.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {pluck} from 'rxjs/operators';
 import {Nacl} from '../../models/doc.nacl';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
 import {ProductSheetComponent} from './sheet.component';
-import {TopTabPageComponent} from '../baseclasses/toptabpage.component';
+import {TopTabPageComponent} from '../../modules/topTab/toptabpage.component';
 import { AuthenticationService } from 'src/app/modules/authentication/services/concrete/authentication.service';
 
 @Component({

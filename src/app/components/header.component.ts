@@ -8,7 +8,7 @@ import {
 } from '@angular/material/tree';
 import { of as observableOf, Observable } from 'rxjs';
 import { TopTab } from '../models/toptab';
-import { TopTabService } from '../services/concrete/toptab.service';
+import { TopTabService } from '../modules/topTab/toptab.service';
 import { Router } from '@angular/router';
 import { MatTabGroup } from '@angular/material/tabs';
 import { faThList, faTh } from '@fortawesome/pro-duotone-svg-icons';

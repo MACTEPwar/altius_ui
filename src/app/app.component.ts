@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faAlienMonster } from '@fortawesome/pro-solid-svg-icons';
-import { User } from './models/user';
+import { User } from './modules/authentication/models/user';
 import { TopTab } from './models/toptab';
-import { TopTabService } from './services/concrete/toptab.service';
+import { TopTabService } from './modules/topTab/toptab.service';
 import { AuthenticationService } from './modules/authentication/services/concrete/authentication.service';
 
 @Component({ selector: 'app-root', templateUrl: 'app.component.html' })

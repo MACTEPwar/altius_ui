@@ -1,17 +1,16 @@
-import {Component, ComponentFactoryResolver} from '@angular/core';
-import {AuthenticationService} from '../../services/concrete/authentication.service';
-import {TopTabService} from '../../services/concrete/toptab.service';
-import {TableDirective} from '../baseclasses/table.component';
-import {StoreService} from '../../services/concrete/store.service';
-import {Store} from '../../models/store';
-import { CUDService } from 'src/app/services/concrete/CUD-service/cud-service.service';
+import { Component, ComponentFactoryResolver } from '@angular/core';
+import { TopTabService } from '../../../topTab/toptab.service';
+import { TableDirective } from '../../baseclasses/table.component';
+import { StoreService } from '../../services/concrete/store.service';
+import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
 
 @Component({
-  templateUrl: '../baseclasses/table.component.html',
+  templateUrl: '../../baseclasses/table.component.html',
+  styleUrls: ['../../baseclasses/table.component.scss'],
   providers: [StoreService]
 })
 export class StoreComponent extends TableDirective {
-  data: Store[] = [];
 
   constructor(
     authenticationService: AuthenticationService,

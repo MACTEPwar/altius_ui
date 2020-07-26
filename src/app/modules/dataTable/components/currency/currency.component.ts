@@ -1,17 +1,16 @@
 import {Component, ComponentFactoryResolver} from '@angular/core';
-import {AuthenticationService} from '../../services/concrete/authentication.service';
-import {TopTabService} from '../../services/concrete/toptab.service';
-import {TableDirective} from '../baseclasses/table.component';
+import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
+import { TopTabService } from '../../../topTab/toptab.service';
+import { TableDirective } from '../../baseclasses/table.component';
 import {CurrencyService} from '../../services/concrete/currency.service';
-import {Currency} from '../../models/currency';
-import { CUDService } from 'src/app/services/concrete/CUD-service/cud-service.service';
+import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
 
 @Component({
-  templateUrl: '../baseclasses/table.component.html',
+  templateUrl: '../../baseclasses/table.component.html',
+  styleUrls: ['../../baseclasses/table.component.scss'],
   providers: [CurrencyService]
 })
 export class CurrencyComponent extends TableDirective {
-  data: Currency[] = [];
 
   constructor(
     authenticationService: AuthenticationService,

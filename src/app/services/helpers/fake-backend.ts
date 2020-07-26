@@ -11,7 +11,7 @@ import {
   ColumnSettings,
   EDataType, TemplateEntity,
   TemplateEntityColumn
-} from '../../models/concrete/templateentity';
+} from '../../modules/dataTable/models/templateentity';
 import { Nacl } from '../../models/doc.nacl';
 import { NaclProduct } from '../../models/doc.nacl.product';
 import { MainMenu } from '../../models/mainmenu';

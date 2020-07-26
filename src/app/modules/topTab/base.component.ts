@@ -1,6 +1,6 @@
-import {User} from '../../models/user';
-import {AuthenticationService} from '../../services/concrete/authentication.service';
-import {TopTabService} from '../../services/concrete/toptab.service';
+import {User} from '../authentication/models/user';
+import {AuthenticationService} from '../authentication/services/concrete/authentication.service';
+import {TopTabService} from './toptab.service';
 
 export abstract class BaseComponent {
   currentUser: User;

@@ -1,14 +1,13 @@
 import { Component, ComponentFactoryResolver } from '@angular/core';
-import { CUDService } from 'src/app/services/concrete/CUD-service/cud-service.service';
-import { AuthenticationService } from '../../services/concrete/authentication.service';
+import { CUDService } from '../../../../services/concrete/CUD-service/cud-service.service';
+import { AuthenticationService } from '../../../authentication/services/concrete/authentication.service';
 import { BankService } from '../../services/concrete/bank.service';
-import { TopTabService } from '../../services/concrete/toptab.service';
-import { TableDirective } from '../baseclasses/table.component';
+import { TopTabService } from '../../../topTab/toptab.service';
+import { TableDirective } from '../../baseclasses/table.component';
 
 @Component({
-  selector: 'app-banks',
-  templateUrl: '../baseclasses/table.component.html',
-  styleUrls: ['../baseclasses/table.component.scss'],
+  templateUrl: '../../baseclasses/table.component.html',
+  styleUrls: ['../../baseclasses/table.component.scss'],
   providers: [BankService]
 })
 export class BanksComponent extends TableDirective {
